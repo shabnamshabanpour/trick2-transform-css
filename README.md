@@ -1,7 +1,7 @@
 # trick2-transform-css
 **If you have a lot of information to display on your site, why don't you use my accordion menu**
 
-![view](https://github.com/user-attachments/assets/46ddddc3-342e-412d-8c03-750c33654382)
+<img width="727" height="582" alt="Image" src="https://github.com/user-attachments/assets/14b43c86-c399-4a28-9d49-a02ea74c3566" />
 
 
 🌐[Demo Project](https://shabnamshabanpour.github.io/trick2-transform-css/)
