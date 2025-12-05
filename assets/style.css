@@ -1,0 +1,163 @@
+main {
+    background: #0c0c0c;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: sans-serif;
+
+    >.circle-menu {
+        width: 360px;
+        height: 360px;
+        position: relative;
+        perspective: 800px;
+
+        &:hover {
+            >center {
+                transform: translate(-50%, -50%) scale(1.08);
+                box-shadow: 0 0 35px rgba(255, 0, 120, 0.55);
+            }
+        }
+
+
+        >.center {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            background: linear-gradient(145deg, #1c1c1c, #000);
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: #fff;
+            font-size: 20px;
+            font-weight: 600;
+            box-shadow: 0 0 25px rgba(255, 0, 100, 0.3);
+            transition: 0.5s;
+        }
+
+        >div {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            background: linear-gradient(145deg, #292929, #1a1a1a);
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: #fff;
+            font-size: 22px;
+            font-weight: 600;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.45);
+            transition: 0.45s;
+            transform-style: preserve-3d;
+
+
+
+            &:nth-of-type(2) {
+                transform: translate(-50%, -50%) rotate(0deg) translate(140px) rotate(0deg);
+            }
+
+            &:nth-of-type(3) {
+                transform: translate(-50%, -50%) rotate(60deg) translate(140px) rotate(-60deg);
+            }
+
+            &:nth-of-type(4) {
+                transform: translate(-50%, -50%) rotate(120deg) translate(140px) rotate(-120deg);
+            }
+
+            &:nth-of-type(5) {
+                transform: translate(-50%, -50%) rotate(180deg) translate(140px) rotate(-180deg);
+            }
+
+            &:nth-of-type(6) {
+                transform: translate(-50%, -50%) rotate(240deg) translate(140px) rotate(-240deg);
+            }
+
+            &:nth-of-type(7) {
+                transform: translate(-50%, -50%) rotate(300deg) translate(140px) rotate(-300deg);
+            }
+        }
+
+        div:hover {
+            transform: translate(-50%, -50%) translateZ(100px) scale(1.2) !important;
+            background: linear-gradient(145deg, #ff0077, #ff5500);
+            box-shadow: 0 15px 40px rgba(255, 0, 120, 0.45);
+        }
+
+
+    }
+}
+
+footer {
+    >.coyright {
+        position: absolute;
+        bottom: 20px;
+        right: 20px;
+        display: flex;
+        flex-direction: column-reverse;
+        align-items: center;
+        cursor: pointer;
+
+        &:hover {
+            >.info {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+
+        >img {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            box-shadow: 0 0 15px rgba(219, 215, 215, 0.8);
+            object-fit: cover;
+            transition: transform .3s ease;
+        }
+
+        >.info {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-end;
+            margin-bottom: 10px;
+            opacity: 0;
+            transform: translateX(50px);
+            transition: all 0.5s ease;
+
+            >.name {
+                font-weight: bold;
+                color: rgb(129, 128, 128);
+                font-size: 17px;
+                margin: 0 0 5px 0
+            }
+
+            >.socials {
+                display: flex;
+                color: rgb(129, 128, 128);
+                gap: 10px;
+                /* background-color: red; */
+                &:hover{
+                    >svg{
+                        transform: scale(1.2);
+                    }
+                }
+
+                >a {
+                    >svg {
+                        width: 40px;
+                        height: 20px;
+                        transition: transform 0.3s;
+                    }
+                }
+
+            }
+
+
+        }
+    }
+}
